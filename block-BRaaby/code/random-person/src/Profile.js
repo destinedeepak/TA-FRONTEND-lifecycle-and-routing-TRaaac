@@ -14,20 +14,20 @@ class Profile extends React.Component {
           <h2 className="text-gray-500 text-lg mt-4">My name is</h2>
           <h1 className="text-4xl mt-2">{text}</h1>
           <div className="text-4xl flex justify-between px-20 mt-8">
-            <button className="text-gray-600"  onMouseOver={this.props.handleMouseHover}>
-              <i className="fas fa-user" id="name"></i>
+            <button className="text-gray-600"  onMouseOver={()=>{this.props.handleMouseHover('name')}}>
+              <i className="fas fa-user" ></i>
             </button>
-            <button className="text-gray-600" onMouseOver={this.props.handleMouseHover}>
-              <i className="fas fa-envelope-open" id="message" ></i>
+            <button className="text-gray-600" onMouseOver={()=>{this.props.handleMouseHover('message')}}>
+              <i className="fas fa-envelope-open"></i>
             </button>
-            <button className="text-gray-600"  onMouseOver={this.props.handleMouseHover}>
-              <i className="fas fa-map" id="address"></i>
+            <button className="text-gray-600"  onMouseOver={()=>{this.props.handleMouseHover('address')}}>
+              <i className="fas fa-map"></i>
             </button>
-            <button className="text-gray-600"  onMouseOver={this.props.handleMouseHover}>
-              <i className="fas fa-phone-alt" id="phone"></i>
+            <button className="text-gray-600"  onMouseOver={()=>{this.props.handleMouseHover('phone')}}>
+              <i className="fas fa-phone-alt"></i>
             </button>
-            <button className="text-gray-600"  onMouseOver={this.props.handleMouseHover}>
-              <i className="fas fa-lock" id="password"></i>
+            <button className="text-gray-600"  onMouseOver={()=>{this.props.handleMouseHover('password')}}>
+              <i className="fas fa-lock"></i>
             </button>
           </div>
           <button className="px-4 py-1 bg-secondary rounded my-6 " onClick={this.props.handleClick}>

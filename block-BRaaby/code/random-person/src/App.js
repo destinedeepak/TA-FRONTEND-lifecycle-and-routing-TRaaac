@@ -13,11 +13,10 @@ class App extends React.Component {
       .then((res) => res.json())
       .then((data) => this.setState({ data: data, text:data.results[0].name.title+" "+data.results[0].name.first}));
   }
-  handleMouseHover = (event) => {
-    let id = event.target.id;
+  handleMouseHover = (field) => {
     let user = this.state.data.results[0];
     // eslint-disable-next-line default-case
-    switch (id) {
+    switch (field) {
       case 'address':
         this.setState({
           text: `${user.location.street.number}, ${user.location.street.name}`,
@@ -32,6 +31,9 @@ class App extends React.Component {
       case 'password':
         this.setState({ text: user.login.password });
         break;
+        case 'name':
+          this.setState({ text: user.name.title+" "+user.name.first });
+          break;
     }
   };
   handleClick = () => {
